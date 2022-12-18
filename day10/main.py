@@ -31,7 +31,7 @@ def main():
     i = 0
     first = True
     while i < len(data):
-        if (cycle_count - 20) % 40 == 0:    
+        if cycle_count % 40 == 20:    
             signal_sum += register_state*cycle_count
 
         if register_state <= cycle_count % 40 <= register_state + 2:
@@ -48,12 +48,13 @@ def main():
             i += 1
         cycle_count += 1
     
+    print(signal_sum)
+
     for pos, pixel in enumerate(screen, 1):
         if pos % 40 > 0:
             print(pixel, end="")
         else:
             print(pixel)
 
-    print(signal_sum)
 
 main()

@@ -39,25 +39,13 @@ def process_pairs(left, right):
     return process_pairs(l, r)
 
 def main():
-    #data = parse("input.txt")
-    #sum = 0
-    #for x, pair in enumerate(data):
-        ## Compare each pair recursively
-        #left = pair[0]
-        #right = pair[1]
-        #if process_pairs(left, right) == -1:
-            #sum += x 
-    #print(sum)
     pairs = parse("input.txt")
-   # data = open("input.txt").read().strip()
     
-    #pairs = [list(map(literal_eval, p.split("\n"))) for p in data.split("\n\n")]
+    # part 1
     print(sum(i for i, (l, r) in enumerate(pairs, 1) if process_pairs(l, r) == -1))
 
     # part 2
-    # doesn't work yet
     packets = sorted([y for x in pairs for y in x] + [[[2]], [[6]]], key=cmp_to_key(process_pairs))
-   # packets = sorted([*pairs, [[2]], [[6]]], key=cmp_to_key(process_pairs), reverse=True)
-    print(prod([n for n, packet in enumerate(packets, 1) if packet == [[2]] or packet == [[6]]]))
+    print(prod(n for n, packet in enumerate(packets, 1) if packet == [[2]] or packet == [[6]]))
 
 main()

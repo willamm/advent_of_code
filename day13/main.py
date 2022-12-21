@@ -56,7 +56,8 @@ def main():
 
     # part 2
     # doesn't work yet
-    packets = sorted([y for x in pairs for y in x] + [[[2]], [[6]]], key=cmp_to_key(process_pairs), reverse=True)
-    print(prod([n for n, packet in enumerate(packets, 1) if packet in ([[2]], [[6]])]))
+    packets = sorted([y for x in pairs for y in x] + [[[2]], [[6]]], key=cmp_to_key(process_pairs))
+   # packets = sorted([*pairs, [[2]], [[6]]], key=cmp_to_key(process_pairs), reverse=True)
+    print(prod([n for n, packet in enumerate(packets, 1) if packet == [[2]] or packet == [[6]]]))
 
 main()

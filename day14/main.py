@@ -24,12 +24,12 @@ def part(rock_coords, max_depth, is_part2=False):
             (x, y) = origin
         if y > max_depth and not is_part2:
             return sand_count
-        if (x, y + 1) not in rock_coords and y < max_depth + 1:
+        if (x, y + 1) not in rock_coords and y <= max_depth:
             y += 1
-        elif (x - 1, y + 1) not in rock_coords and y < max_depth + 1:
+        elif (x - 1, y + 1) not in rock_coords and y <= max_depth:
             x -= 1
             y += 1
-        elif (x + 1, y + 1) not in rock_coords and y < max_depth + 1:
+        elif (x + 1, y + 1) not in rock_coords and y <= max_depth:
             x += 1
             y += 1
         else:

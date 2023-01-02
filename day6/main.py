@@ -18,7 +18,9 @@ def main():
     with open("input.txt", "r") as f:
         lines = f.readlines();
         for line in lines:
+            # part 1
             ch_count = get_marker(line, 4)
+            # part 2
             start_count = get_marker(line, 14)
     print(ch_count)
     print(start_count)

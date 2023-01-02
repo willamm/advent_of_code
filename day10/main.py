@@ -14,20 +14,6 @@ def main():
     cycle_count = 1
     signal_sum = 0
     screen = ""
-    #for ins, val in data:
-        #v = int(val)
-        #if ins == "addx": 
-            #cycle_count += 1
-            #if (cycle_count - 20) % 40 == 0:
-                #signal_sum += register_state*cycle_count
-            #register_state += v
-            #cycle_count += 1
-            #if (cycle_count - 20) % 40 == 0:
-                #signal_sum += register_state*cycle_count
-        #else:
-            #cycle_count += 1
-            #if (cycle_count - 20) % 40 == 0:
-                #signal_sum += register_state*cycle_count
     i = 0
     first = True
     while i < len(data):

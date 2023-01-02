@@ -39,9 +39,7 @@ def part(rock_coords, max_depth, is_part2=False):
             return sand_count
 
 def main():
-    print("Hello World!")
     rock_coords, max_depth = parse_input("input.txt")
-
     ans1 = part(rock_coords.copy(), max_depth)
     ans2 = part(rock_coords.copy(), max_depth, True)
     print(ans1)

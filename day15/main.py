@@ -28,6 +28,5 @@ def p1(sensors, beacons):
 def main():
     sensors, beacons = parse_input("input.txt")
     print(p1(sensors, beacons))
-    print("hello world!")
 
 main()
